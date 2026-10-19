@@ -1,8 +1,8 @@
 # RyoGeese-Dash
 
-**RyoGeese 的配套游戏信息面板，由手电加鞭制作，开源免费。**
+[English](#english)
 
-Dash 在魔兽世界内显示技能冷却、目标 DOT、资源和 BUFF 等信息，供 [RyoGeese 桌面软件](https://github.com/muttsf/RyoGeese) 通过画面识别读取。插件只显示信息，技能推荐由桌面软件计算，技能由玩家自行施放。
+RyoGeese 的配套游戏信息面板，由手电加鞭制作，在魔兽世界内显示技能冷却、目标 DOT、资源和 BUFF 等信息，代替官方CDM并提供窗口给配套工具做视觉采集。
 
 **[下载插件 ZIP](https://github.com/muttsf/RyoGeese-Dash/archive/refs/heads/main.zip) · [下载桌面软件](https://github.com/muttsf/RyoGeese/releases) · [反馈问题](https://github.com/muttsf/RyoGeese-Dash/issues)**
 
@@ -81,3 +81,89 @@ World of Warcraft/
 游戏内图标通过游戏纹理引用显示，本仓库不附带提取的游戏图片。
 
 自有源码采用 **GPL-3.0-only**，见 [LICENSE](LICENSE)。欢迎通过 Issue 和 PR 参与改进。
+
+---
+
+## English
+
+[返回中文 / Back to Chinese](#ryogeese-dash)
+
+RyoGeese-Dash is the companion in-game information panel for RyoGeese, created by **手电加鞭**. It displays ability cooldowns, target DoTs, resources, and buffs in World of Warcraft, replacing the game's built-in CDM and providing an on-screen panel for companion tools to capture visually.
+
+**[Download addon ZIP](https://github.com/muttsf/RyoGeese-Dash/archive/refs/heads/main.zip) · [Download desktop app](https://github.com/muttsf/RyoGeese/releases) · [Report an issue](https://github.com/muttsf/RyoGeese-Dash/issues)**
+
+The current addon version is **1.45-S1**, for **Retail 12.1.5 · Shadow Priest**. Templates for other specializations are not yet complete; Demonology Warlock and other specializations are planned for future updates.
+
+If you like this project, please consider giving it a **Star**.
+
+### Installation
+
+1. **Exit the game.**
+2. Click “Download addon ZIP” above, or use the green **Code → Download ZIP** button on this repository.
+3. Extract the ZIP and find the **`MindBlastBox01`** folder inside.
+4. Copy the entire folder into **`_retail_/Interface/AddOns/`** in your current Retail installation.
+5. Launch the game, make sure the addon is enabled in the addon list, and log into your character to see the Dash panel.
+
+The resulting folder structure should look like this:
+
+```text
+World of Warcraft/
+└─ _retail_/
+   └─ Interface/
+      └─ AddOns/
+         └─ MindBlastBox01/
+            ├─ MindBlastBox01.toc
+            ├─ MindBlastBox01_Dash.lua
+            └─ ...
+```
+
+**Keep the folder name `MindBlastBox01`.** Do not put the outer `RyoGeese-Dash-main` folder into `AddOns`, and do not nest an extra `MindBlastBox01` folder inside it.
+
+This repository provides the addon source directly, without a separate addon installer. The desktop app must be [downloaded and installed separately](https://github.com/muttsf/RyoGeese/releases).
+
+### Panel settings
+
+Enter these commands in the in-game chat:
+
+| Command | Purpose |
+| --- | --- |
+| `/dashconfig` | Open settings to adjust the panel position, size, and number font size. |
+| `/dash` | Show addon status for troubleshooting. |
+
+To move the panel, unlock it, drag its title, then lock it again. Keep the entire panel visible while using RyoGeese. After changing its position, size, or font size, **locate the panel again** in the desktop app.
+
+### What the panel shows
+
+| Area | Current Shadow Priest template |
+| --- | --- |
+| **Column A** | Ability cooldowns, charges, or current use counts. |
+| **Column B** | Shadow Word: Pain, Vampiric Touch, and Shadow Word: Madness on the target. |
+| **Column C** | Target health percentage and player Insanity. |
+| **Column D** | Player buffs, including Entropic Rift, Voidform, and Power Infusion. |
+
+Slots use a fixed grid to help with panel location and visual recognition. See [README.txt](README.txt) for the full slot descriptions in Chinese.
+
+### Frequently asked questions
+
+**Does the addon recommend abilities on its own?**<br>
+No. The addon displays game information. Ability recommendations require the [RyoGeese desktop app](https://github.com/muttsf/RyoGeese) to be running as well.
+
+**Why is the addon missing from the addon list?**<br>
+Check that you used the `AddOns` directory for your current Retail installation. Make sure `MindBlastBox01.toc` is directly inside `AddOns/MindBlastBox01/`, then restart the game.
+
+**Are panel settings saved?**<br>
+The game saves the position, size, and font size separately for each character. Uninstalling the desktop app does not remove these settings.
+
+**How do I update the addon?**<br>
+Exit the game, download the new version, replace the existing `MindBlastBox01` folder with the new one, then launch the game again. If the update changes the panel, locate it again in the desktop app.
+
+**How do I report a problem?**<br>
+Open an [issue](https://github.com/muttsf/RyoGeese-Dash/issues) describing the problem. Include your game version, addon version, and `/dash` status or a screenshot of the panel. For desktop installation, recognition, or recommendation issues, use the [desktop app repository](https://github.com/muttsf/RyoGeese/issues).
+
+### Development and license
+
+The desktop app and addon are maintained and updated separately. The current interface version is `120105`, and the layout version is `L16`. Future specialization templates will retain the basic fixed row-and-column structure.
+
+In-game icons reference game textures. This repository does not include extracted game images.
+
+Project-owned source code is licensed under **GPL-3.0-only**; see [LICENSE](LICENSE). Contributions through issues and pull requests are welcome.
