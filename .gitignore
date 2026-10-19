@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+user_data/
+logs/
+cache/
+*.log
+*.exe
+*.mp3
+*.wav
+*.onnx
+runtime/
+实验/
+private_*/

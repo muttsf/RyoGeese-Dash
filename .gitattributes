@@ -1,0 +1,2 @@
+# Preserve the tested addon source exactly on all checkouts.
+* -text

@@ -1,0 +1,8 @@
+## Author: 手电加鞭
+## X-License: GPL-3.0-only
+## Interface: 120105
+## Title: MindBlastBox01
+## Notes: RyoGeese visual information dashboard for Shadow Priest (A/B/C/D).
+## Version: 1.45-S1
+## SavedVariablesPerCharacter: MindBlastBox01DB
+MindBlastBox01_Dash.lua
